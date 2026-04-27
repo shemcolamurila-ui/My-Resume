@@ -140,3 +140,16 @@ export const CERTIFICATIONS = [
     icon: <Briefcase className="w-5 h-5" />
   }
 ];
+
+export const EDUCATION_DATA = [
+  {
+    institution: "Kenyatta University",
+    degree: "Bachelor of Science in Computer Science",
+    icon: <GraduationCap className="w-5 h-5" />
+  },
+  {
+    institution: "Graffin’s College",
+    degree: "Diploma in Computer Programming",
+    icon: <Code className="w-5 h-5" />
+  }
+];

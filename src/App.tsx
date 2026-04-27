@@ -23,9 +23,10 @@ import {
   ShieldCheck,
   Github,
   Award,
-  Database
+  Database,
+  GraduationCap
 } from "lucide-react";
-import { EXPERIENCE_DATA, REGIONS, IMPACT_POINTS, CONTACT_INFO, CERTIFICATIONS } from "./constants";
+import { EXPERIENCE_DATA, REGIONS, IMPACT_POINTS, CONTACT_INFO, CERTIFICATIONS, EDUCATION_DATA } from "./constants";
 
 const fadeIn = {
   hidden: { opacity: 0, y: 30 },
@@ -249,6 +250,44 @@ export default function App() {
                           <span className="text-[11px] font-bold text-slate-500 leading-tight group-hover:text-slate-400">{item}</span>
                         </div>
                       ))}
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Education Section */}
+        <section className="py-24 px-6 bg-[#0a0c16]">
+          <div className="mx-auto max-w-7xl">
+            <div className="mb-16 text-center lg:text-left">
+              <motion.span 
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                className="mb-4 block text-sm font-black uppercase tracking-[0.5em] text-indigo-500"
+              >
+                Academic Background
+              </motion.span>
+              <h2 className="text-5xl font-black text-white tracking-tight">Education</h2>
+            </div>
+
+            <div className="grid gap-8 md:grid-cols-2">
+              {EDUCATION_DATA.map((edu, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ delay: index * 0.1 }}
+                  className="group relative overflow-hidden rounded-[40px] bg-white/5 p-10 ring-1 ring-white/5 transition-all hover:bg-white/10"
+                >
+                  <div className="flex items-center gap-6">
+                    <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-indigo-600/20 text-indigo-400 group-hover:bg-indigo-600 group-hover:text-white transition-all duration-500">
+                      {edu.icon}
+                    </div>
+                    <div>
+                      <h3 className="text-2xl font-black text-white">{edu.degree}</h3>
+                      <p className="text-sm font-bold text-slate-500 uppercase tracking-widest mt-1">{edu.institution}</p>
                     </div>
                   </div>
                 </motion.div>
