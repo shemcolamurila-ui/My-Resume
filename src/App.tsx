@@ -282,10 +282,11 @@ export default function App() {
                   className="group relative overflow-hidden rounded-[40px] bg-white/5 p-10 ring-1 ring-white/5 transition-all hover:bg-white/10"
                 >
                   <div className="flex items-center gap-6">
-                    <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-indigo-600/20 text-indigo-400 group-hover:bg-indigo-600 group-hover:text-white transition-all duration-500">
+                    <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-indigo-600/20 text-indigo-400 group-hover:bg-indigo-600 group-hover:text-white transition-all duration-500 shrink-0">
                       {edu.icon}
                     </div>
                     <div>
+                      <div className="text-xs font-bold uppercase tracking-widest text-indigo-500 mb-1">{(edu as any).year}</div>
                       <h3 className="text-2xl font-black text-white">{edu.degree}</h3>
                       <p className="text-sm font-bold text-slate-500 uppercase tracking-widest mt-1">{edu.institution}</p>
                     </div>

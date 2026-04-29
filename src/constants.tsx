@@ -145,11 +145,13 @@ export const EDUCATION_DATA = [
   {
     institution: "Kenyatta University",
     degree: "Bachelor of Science in Computer Science",
+    year: "2015",
     icon: <GraduationCap className="w-5 h-5" />
   },
   {
     institution: "Graffin’s College",
     degree: "Diploma in Computer Programming",
+    year: "2015",
     icon: <Code className="w-5 h-5" />
   }
 ];
